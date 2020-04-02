@@ -1,0 +1,27 @@
+  % Floating Equations
+  \newaliascnt{eqfloat}{equation}
+  \newfloat{eqfloat}{h}{eqflts}
+  \floatname{eqfloat}{Equation}
+
+  \newcommand*{\ORGeqfloat}{}
+  \let\ORGeqfloat\eqfloat
+  \def\eqfloat{%
+    \let\ORIGINALcaption\caption
+    \def\caption{%
+      \addtocounter{equation}{-1}%
+      \ORIGINALcaption
+    }%
+    \ORGeqfloat
+  }
+
+%   Question 1
+%   \section{Question}
+%     Placeholder:
+%     \begin{enumerate}[label=\alph*.]
+%       \item Placeholder.
+%     \end{enumerate}
+%     % Question 1 Solution
+%     \subsection{Solution}
+%       \begin{enumerate}[label=\alph*.]
+%           \item Placeholder.
+%       \end{enumerate}

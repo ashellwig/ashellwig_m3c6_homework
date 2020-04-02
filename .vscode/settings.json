@@ -1,0 +1,12 @@
+{
+    "[latex]": {
+        "editor.formatOnSave": false
+    },
+    "[bibtex]": {
+        "editor.formatOnSave": false
+    },
+    "cSpell.words": [
+        "iostream",
+        "setw"
+    ]
+}
