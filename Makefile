@@ -35,7 +35,7 @@ user-doc-clean:
 user-doc-clean-all: user-doc-clean
 	rm -rf *.pdf
 ## Build
-user-doc-build: %.tex
+pdf: %.tex
 %.tex: user-doc-clean
 	latexmk -synctex=1 -shell-escape -interaction=nonstopmode -file-line-error \
 	-jobname=main -pdf main.tex
